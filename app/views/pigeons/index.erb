@@ -11,6 +11,7 @@
         <th>Lives</th>
         <th></th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -20,12 +21,18 @@
         <td><%=pigeon.color%></td>
         <td><%=pigeon.gender%></td>
         <td><%=pigeon.lives%></td>
+
+        <td><form action="/pigeons/<%= pigeon.id%>" method="GET">
+        <input type="submit" value="Show" /></form></td>
+
         <td><form action="/pigeons/<%= pigeon.id%>/edit" method="GET">
         <input type="submit" value="Edit" /></form></td>
+
         <td><form action="/pigeons/<%= pigeon.id %>" method="POST">
           <input type="hidden" name="_method" value="DELETE" />
           <input type="submit" value="Destroy" />
         </form></td>
+
         <tr>
       <%end%>
     </tbody>

@@ -11,12 +11,21 @@
   <li>Lives: <%=@pigeon.lives%></li>
 </ul>
 
-<li><a href="/pigeons/<%= @pigeon.id %>/edit">Edit</a></li>
+<ul>
+  <li>
+    <form action="/pigeons/<%= @pigeon.id %>/edit" method="GET">
+      <input type="submit" value="Edit" />
+    </form>
+  </li>
 
-<li>
-  <form action="/pigeons/<%= @pigeon.id%>" method="POST">
-  <input type="hidden" name="_method" value="DELETE" />
-  <input type="submit" value="Destroy" />
-</li>
+  <li><a class="button" href="/pigeons">Back</a></li>
+
+  <li>
+    <form action="/pigeons/<%= @pigeon.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Destroy" />
+    </form>
+  </li>
+</ul>
 
 <%= erb :'layouts/_footer' %>
