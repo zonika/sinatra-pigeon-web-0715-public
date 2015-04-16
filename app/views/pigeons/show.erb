@@ -1,7 +1,5 @@
 <%= erb :'layouts/_header' %>
 
-  <img src="http://<%= @pigeon.color.delete("[],\"").split.first %>pigeon.jpg.to/" width="300">
-
 <h1><%= @pigeon.name %></h1>
 
 <ul>
@@ -18,7 +16,7 @@
     </form>
   </li>
 
-  <li><a class="button" href="/pigeons">Back</a></li>
+  <li><a class="button" href="/pigeons">Show All Pigeons</a></li>
 
   <li>
     <form action="/pigeons/<%= @pigeon.id%>" method="POST">

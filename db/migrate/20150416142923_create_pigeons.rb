@@ -1,6 +1,6 @@
 class CreatePigeons < ActiveRecord::Migration
   def change
-    create_table :pigeon do |t|
+    create_table :pigeons do |t|
       t.string :name
       t.string :color
       t.string :gender

@@ -1,0 +1,27 @@
+test: &test
+  adapter: postgresql
+  database: sinatra_pigeon_test
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+staging:
+  adapter: postgresql
+  database: sinatra_pigeon_staging
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+development:
+  adapter: postgresql
+  database: sinatra_pigeon_staging
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+production:
+  adapter: postgresql
+  database: sinatra_pigeon_production
+  pool: 5
+  timeout: 5000
+  encoding: unicode

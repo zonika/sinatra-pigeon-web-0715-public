@@ -1,16 +1,21 @@
 class PigeonsController < ApplicationController
 
+  get '/' do
+    redirect '/pigeons'
+  end
+
   # Show all pigeons
   get '/pigeons' do
     @pigeons = Pigeon.all
     erb :'pigeons/index'
   end
 
-  # Form to create a new Pigeon
+  # Form to set attributes for a new Pigeon
   get '/pigeons/new' do
     erb :"/pigeons/new"
   end
 
+  # Form is posted thus pigeon is created and added to database
   post '/pigeons' do
     @pigeon = Pigeon.new(params)
     @pigeon.name = params["name"]
